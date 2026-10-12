@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#ff7a59" />
+  <meta name="description" content="宠迹 PawTrace — 一站式养宠成长记录与同城社区：记录体重/疫苗/驱虫，生成成长时间线，按地域匹配宠友，分享养宠日常。" />
+  <title>宠迹 PawTrace · 养宠成长记录与社区</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐾</text></svg>" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- 顶部栏 -->
+    <header class="topbar">
+      <div class="topbar-inner">
+        <a class="brand" href="#home" data-nav="home">
+          <span class="brand-logo">🐾</span>
+          <span class="brand-name">宠迹 <small>PawTrace</small></span>
+        </a>
+        <nav class="topnav" aria-label="主导航">
+          <a href="#home" data-nav="home" class="nav-link is-active">首页</a>
+          <a href="#health" data-nav="health" class="nav-link">健康档案</a>
+          <a href="#timeline" data-nav="timeline" class="nav-link">成长时间线</a>
+          <a href="#friends" data-nav="friends" class="nav-link">同城宠友</a>
+          <a href="#feed" data-nav="feed" class="nav-link">养宠日常</a>
+        </nav>
+        <div class="topbar-user">
+          <button class="chip chip-ghost" id="cityBtn" title="切换城市">📍 <span id="cityLabel">上海</span></button>
+          <button class="btn btn-primary" id="addPostTopBtn">＋ 发动态</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- 主内容 -->
+    <main id="app" class="main" tabindex="-1"></main>
+
+    <!-- 底部导航（移动端） -->
+    <nav class="bottomnav" aria-label="底部导航">
+      <a href="#home" data-nav="home" class="bn-item is-active"><span class="bn-ico">🏠</span><span>首页</span></a>
+      <a href="#health" data-nav="health" class="bn-item"><span class="bn-ico">💉</span><span>健康</span></a>
+      <a href="#feed" data-nav="feed" class="bn-item bn-add"><span class="bn-ico">🐾</span><span>动态</span></a>
+      <a href="#friends" data-nav="friends" class="bn-item"><span class="bn-ico">🧭</span><span>宠友</span></a>
+      <a href="#timeline" data-nav="timeline" class="bn-item"><span class="bn-ico">⏱️</span><span>时间线</span></a>
+    </nav>
+  </div>
+
+  <!-- 弹窗 / 提示 挂载点 -->
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
